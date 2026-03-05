@@ -2,30 +2,39 @@
 just a tutorial project for now i will just try to learn the most from it
 
 here are some learning nd notes
-Encryption
 
-Encryption is a process of converting plaintext data into ciphertext using an algorithm and a key. The encrypted data can be converted back to its original form using the appropriate decryption key. Encryption is therefore reversible.
 
-Example algorithm: AES
+## Encryption vs Hashing
 
-Common uses
+### Encryption
+Encryption converts **plaintext → ciphertext** using an algorithm and a **key**.  
+The data can be **decrypted back to its original form**, so encryption is **reversible**.
 
-Secure data transmission
+**Example algorithm:** AES
 
-Protecting sensitive files or messages
+**Uses**
+- Secure data transmission
+- Protecting sensitive data
+- Communication security
 
-Communication security
+---
 
-Hashing
+### Hashing
+Hashing converts data into a **fixed-length hash value** using a hashing algorithm.  
+It is **one-way**, meaning the original data **cannot be recovered**.
 
-Hashing is the process of converting input data into a fixed-length string called a hash value using a hashing algorithm. Hashing is one-way, meaning the original data cannot be reconstructed from the hash.
+**Example algorithm:** SHA-256
 
-Example algorithm: SHA-256
+**Uses**
+- Password storage
+- Data integrity verification
+- Digital signatures
 
-Common uses
+---
 
-Password storage
+### Quick Difference
 
-Data integrity verification
-
-Digital signatures
+| Feature | Encryption | Hashing |
+|--------|------------|---------|
+| Reversible | Yes | No |
+| Purpose | Protect data | Store passwords / verify data |
