@@ -77,10 +77,16 @@ const userSchema = new Schema({
     // Adds createdAt and updatedAt automatically
     timestamps:true
 });
+<<<<<<< HEAD
 
 // Hash password before saving, only if password was changed
 userSchema.pre("save",async function (next) => {
     if(!this.isModified("password")) return next()
+=======
+userSchema.pre("save",async function (next)=>{
+    // runs BEFORE saving user
+    if(!this.isModified("password")) return next;
+>>>>>>> 26ebdcd948ee3f712c2a61a6cdd6c335268bb202
 
     this.password = await bcrypt.hash(this.password,10)
 });
